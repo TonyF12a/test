@@ -16,10 +16,11 @@ namespace TenderTech
             "User Id=anton;" +
             "Password=fynjyy");
 
-        static public void Connect()
+        static public void Register(string login, string pass, string id)
         {
             connection.Open();
-
+            MySqlCommand command = new MySqlCommand($"INSERT INTO users VALUES(id, '{login}', '{pass}', '{id}')", connection);
+            command.ExecuteNonQuery();
             connection.Close();
         }
     }

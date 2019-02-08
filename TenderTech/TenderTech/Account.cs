@@ -8,50 +8,52 @@ namespace TenderTech
 {
     public class Account
     {
-        public int uID
+        public Account(string login, string pass)
         {
-            get
+            uLogin = login;
+            uPass = new Crypt().Encrypt(pass);
+            char[] values = uLogin.ToCharArray();
+            string id = "";
+            foreach (char letter in values)
             {
-                return uID;
+                string value = Convert.ToInt32(letter).ToString();
+                id += value;
             }
+            uID = id;
+        }
 
-            private set
-            {
-                uID = value;
-            }
+        public string uID
+        {
+            get;
+
+            private set;
         }
 
         private string uLogin
         {
-            get
-            {
-                return uLogin;
-            }
+            get;
 
-            set
-            {
-                uLogin = value;
-            }
+            set;
         }
 
         private string uPass
         {
-            get
-            {
-                return uPass;
-            }
+            get;
 
-            set
-            {
-                uPass = new Crypt().Encrypt(value);
-            }
+            set;
         }
 
-        public int Auth(string login, string pass)
+        public string Auth()
         {
 
 
-            return 1;
+            return "a";
+        }
+        
+        public string Reg()
+        {
+            SQL.Register(uLogin, uPass, uID);
+            return uID;
         }
     }
 }
