@@ -21,6 +21,8 @@ namespace TenderTech
         {
             Account account = new Account(textBox1.Text, textBox2.Text);
             this.Text = account.Auth();
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,6 +42,13 @@ namespace TenderTech
         private void nextFrom()
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Account account = new Account(textBox1.Text, textBox2.Text);
+            account.Delete(this.Text);
+            clearAll();
         }
     }
 }

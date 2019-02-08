@@ -60,5 +60,10 @@ namespace TenderTech
             SQL.Register(uLogin, uPass, uID);
             return uID;
         }
+
+        public void Delete(string id)
+        {
+            SQL.Delete(id);
+        }
     }
 }

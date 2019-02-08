@@ -43,6 +43,14 @@ namespace TenderTech
             connection.Close();
         }
 
+        static public void Delete(string uID)
+        {
+            connection.Open();
+            MySqlCommand command = new MySqlCommand($"DELETE FROM users WHERE uID='{uID}'", connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
         static public string Login(string login, string pass)
         {
             connection.Open();
