@@ -29,7 +29,15 @@ namespace TenderTech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (MessageBox.Show("Вы точно хотите удалить пользователя?", "Удаление пользователя", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                SQL.Delete(account.uID);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Вы отменили удаление пользователя", "Удаление пользователя", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)

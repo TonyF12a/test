@@ -25,16 +25,14 @@ namespace TenderTech
             if (account.Auth() != "Error")
             {
                 this.Text = account.Auth();
-                textBox1.Text = "";
-                textBox2.Text = "";
+                clearAll();
                 this.Hide();
                 new FormMain(account).Show();
             }
             else
             {
                 this.Text = account.Auth();
-                textBox1.Text = "";
-                textBox2.Text = "";
+                clearAll();
             }
         }
 
