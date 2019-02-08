@@ -47,7 +47,16 @@ namespace TenderTech
         {
             connection.Open();
             MySqlCommand command = new MySqlCommand($"SELECT pass FROM users WHERE login='{login}'", connection);
-            string values = command.ExecuteScalar().ToString();
+            string values = "";
+            try
+            {
+                values = command.ExecuteScalar().ToString();
+            }
+            catch (Exception)
+            {
+                
+            }
+            
             connection.Close();
             return values;
         }
