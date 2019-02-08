@@ -12,16 +12,14 @@ namespace TenderTech
 {
     public partial class FormMain : Form
     {
-        private string uID = "";
-        private string login = "";
-        private string pass = "";
+        Account account;
 
-        public FormMain(string _login, string _uID, string _pass)
+        public FormMain(Account _account)
         {
             InitializeComponent();
-            uID = _uID;
-            login = _login;
-            pass = _pass;
+            account = _account;
+            label1.Text += account.uLogin;
+            label2.Text += account.uID;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -31,8 +29,12 @@ namespace TenderTech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Account account = new Account(textBox1.Text, textBox2.Text);
-            account.Delete(this.Text);
+            
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.OpenForms[0].Show();
         }
     }
 }

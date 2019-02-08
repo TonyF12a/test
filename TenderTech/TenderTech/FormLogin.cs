@@ -12,6 +12,8 @@ namespace TenderTech
 {
     public partial class FormLogin : Form
     {
+        public Account account;
+
         public FormLogin()
         {
             InitializeComponent();
@@ -19,15 +21,26 @@ namespace TenderTech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Account account = new Account(textBox1.Text, textBox2.Text);
-            this.Text = account.Auth();
-            textBox1.Text = "";
-            textBox2.Text = "";
+            account = new Account(textBox1.Text, textBox2.Text);
+            if (account.Auth() != "Error")
+            {
+                this.Text = account.Auth();
+                textBox1.Text = "";
+                textBox2.Text = "";
+                this.Hide();
+                new FormMain(account).Show();
+            }
+            else
+            {
+                this.Text = account.Auth();
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Account account = new Account(textBox1.Text, textBox2.Text);
+            account = new Account(textBox1.Text, textBox2.Text);
             this.Text = account.Reg();
             clearAll();
         }
@@ -37,12 +50,6 @@ namespace TenderTech
             textBox1.Text = "";
             textBox2.Text = "";
             this.Text = "TenderTech";
-        }
-
-        private void nextFrom()
-        {
-
-        }
-        
+        }        
     }
 }
