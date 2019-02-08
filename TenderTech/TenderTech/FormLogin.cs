@@ -43,12 +43,6 @@ namespace TenderTech
         {
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Account account = new Account(textBox1.Text, textBox2.Text);
-            account.Delete(this.Text);
-            clearAll();
-        }
+        
     }
 }

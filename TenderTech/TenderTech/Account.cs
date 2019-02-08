@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TenderTech
 {
-    public class Account
+    static public class Account
     {
         public Account(string login, string pass)
         {
@@ -22,28 +22,28 @@ namespace TenderTech
             uID = id;
         }
 
-        public string uID
+        static public string uID
         {
             get;
 
             private set;
         }
 
-        private string uLogin
+        static private string uLogin
         {
             get;
 
             set;
         }
 
-        private string uPass
+        static private string uPass
         {
             get;
 
             set;
         }
 
-        public string Auth()
+        static public string Auth()
         {
             if (SQL.Login(uLogin, uPass) == uPass)
             {
@@ -54,14 +54,14 @@ namespace TenderTech
                 return "Error";
             }
         }
-        
-        public string Reg()
+
+        static public string Reg()
         {
             SQL.Register(uLogin, uPass, uID);
             return uID;
         }
 
-        public void Delete(string id)
+        static public void Delete(string id)
         {
             SQL.Delete(id);
         }
