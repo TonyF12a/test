@@ -1,6 +1,6 @@
 ﻿namespace TenderTech
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -66,6 +66,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(71, 32);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 4;
             // 
@@ -88,7 +89,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +101,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "FormLogin";
             this.ShowIcon = false;
             this.Text = "TenderTech";
             this.ResumeLayout(false);

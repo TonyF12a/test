@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TenderTech
 {
@@ -19,8 +20,17 @@ namespace TenderTech
         static public void Register(string login, string pass, string id)
         {
             connection.Open();
-            MySqlCommand command = new MySqlCommand($"INSERT INTO users VALUES(id, '{login}', '{pass}', '{id}')", connection);
-            command.ExecuteNonQuery();
+            MySqlCommand command_login = new MySqlCommand($"SELECT login FROM users WHERE login='{login}'", connection);
+            string login_in_base = command_login.ExecuteScalar().ToString();
+            if (login_in_base != login)
+            {
+                MySqlCommand command_reg = new MySqlCommand($"INSERT INTO users VALUES(id, '{login}', '{pass}', '{id}')", connection);
+                command_reg.ExecuteNonQuery();
+            }
+            else
+            {
+                MessageBox.Show("Такой пользователь уже существует", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             connection.Close();
         }
 
