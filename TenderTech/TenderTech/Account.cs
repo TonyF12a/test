@@ -15,13 +15,13 @@ namespace TenderTech
                 return uID;
             }
 
-            internal set
+            private set
             {
                 uID = value;
             }
         }
 
-        public string uLogin
+        private string uLogin
         {
             get
             {
@@ -34,19 +34,24 @@ namespace TenderTech
             }
         }
 
-        public string uPass
+        private string uPass
         {
-            internal get
+            get
             {
                 return uPass;
             }
 
             set
             {
-                uPass = value;
+                uPass = new Crypt().Encrypt(value);
             }
         }
 
-        public
+        public int Auth(string login, string pass)
+        {
+
+
+            return 1;
+        }
     }
 }
