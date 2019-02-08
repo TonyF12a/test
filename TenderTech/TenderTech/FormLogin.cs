@@ -27,6 +27,19 @@ namespace TenderTech
         {
             Account account = new Account(textBox1.Text, textBox2.Text);
             this.Text = account.Reg();
+            clearAll();
+        }
+
+        private void clearAll()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            this.Text = "TenderTech";
+        }
+
+        private void nextFrom()
+        {
+
         }
     }
 }

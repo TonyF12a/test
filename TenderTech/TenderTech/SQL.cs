@@ -21,7 +21,16 @@ namespace TenderTech
         {
             connection.Open();
             MySqlCommand command_login = new MySqlCommand($"SELECT login FROM users WHERE login='{login}'", connection);
-            string login_in_base = command_login.ExecuteScalar().ToString();
+            string login_in_base = "";
+            try
+            {
+                login_in_base = command_login.ExecuteScalar().ToString();
+            }
+            catch (Exception)
+            {
+                
+            }
+
             if (login_in_base != login)
             {
                 MySqlCommand command_reg = new MySqlCommand($"INSERT INTO users VALUES(id, '{login}', '{pass}', '{id}')", connection);
