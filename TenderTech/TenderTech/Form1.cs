@@ -19,7 +19,7 @@ namespace TenderTech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var a = new Account();
+            SQL.Connect();
         }
     }
 }

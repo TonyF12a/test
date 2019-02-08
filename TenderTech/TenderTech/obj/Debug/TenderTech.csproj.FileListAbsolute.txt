@@ -1,0 +1,14 @@
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\bin\Debug\TenderTech.exe.config
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\bin\Debug\TenderTech.exe
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\bin\Debug\TenderTech.pdb
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.csprojAssemblyReference.cache
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.Form1.resources
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.Properties.Resources.resources
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.csproj.GenerateResource.cache
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.csproj.CoreCompileInputs.cache
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.exe
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.pdb
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\bin\Debug\MySql.Data.dll
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\bin\Debug\Google.Protobuf.dll
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\bin\Debug\MySql.Data.xml
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.csproj.CopyComplete
