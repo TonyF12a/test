@@ -19,7 +19,8 @@ namespace TenderTech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Account account = new Account(textBox1.Text, textBox2.Text);
+            this.Text = account.Auth();
         }
 
         private void button2_Click(object sender, EventArgs e)

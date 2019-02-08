@@ -23,5 +23,14 @@ namespace TenderTech
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+        static public string Login(string login, string pass)
+        {
+            connection.Open();
+            MySqlCommand command = new MySqlCommand($"SELECT pass FROM users WHERE login='{login}'", connection);
+            string values = command.ExecuteScalar().ToString();
+            connection.Close();
+            return values;
+        }
     }
 }

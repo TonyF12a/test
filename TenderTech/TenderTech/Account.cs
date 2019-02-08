@@ -45,9 +45,14 @@ namespace TenderTech
 
         public string Auth()
         {
-
-
-            return "a";
+            if (SQL.Login(uLogin, uPass) == uPass)
+            {
+                return uID;
+            }
+            else
+            {
+                return "Error";
+            }
         }
         
         public string Reg()
