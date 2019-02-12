@@ -8,6 +8,12 @@ namespace TenderTech
 {
     public class Account
     {
+        public string uID { get; private set; }
+
+        public string uLogin { get; private set; }
+
+        private string uPass { get; set; }
+
         public Account(string login, string pass)
         {
             uLogin = login;
@@ -21,29 +27,8 @@ namespace TenderTech
             }
             uID = id;
         }
-
-        public string uID
-        {
-            get;
-
-            private set;
-        }
-
-        public string uLogin
-        {
-            get;
-
-            private set;
-        }
-
-        private string uPass
-        {
-            get;
-
-            set;
-        }
-
-        public string Auth()
+        
+        public string Auth() 
         {
             if (SQL.Login(uLogin, uPass) == uPass)
             {

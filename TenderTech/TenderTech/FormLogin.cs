@@ -38,9 +38,8 @@ namespace TenderTech
 
         private void button2_Click(object sender, EventArgs e)
         {
-            account = new Account(textBox1.Text, textBox2.Text);
-            this.Text = account.Reg();
-            clearAll();
+            Register register = new Register();
+            register.Show();
         }
 
         private void clearAll()

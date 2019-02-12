@@ -13,3 +13,4 @@ C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\bin\Debug\MySql.
 C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.csproj.CopyComplete
 C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.FormLogin.resources
 C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.FormMain.resources
+C:\Users\Антон\Documents\GitHub\test\TenderTech\TenderTech\obj\Debug\TenderTech.Register.resources
